@@ -1,6 +1,20 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "./styles/globals.css";
+import "./styles/font-awesome-all.css";
+import "./styles/flaticon.css";
+import "./styles/owl.css";
+import "./styles/bootstrap.css";
+import "./styles/jquery.fancybox.min.css";
+import "./styles/animate.css";
+import "./styles/jquery-ui.css";
+import "./styles/nice-select.css";
+import "./styles/theme-color.css";
+import "./styles/style.css";
+import "./styles/responsive.css";
+import Loader from "@/components/Loader";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +30,39 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Loader />
+        <Header />
+        {children}
+        <Footer />
+        {/* <script src="/js/jquery.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/popper.min.js"></script>
+        {/* <script src="/js/owl.js"></script> */}
+        {/* <script src="/js/wow.js"></script>
+        <script src="/js/validation.js"></script>
+        <script src="/js/jquery.fancybox.js"></script>
+        <script src="/js/appear.js"></script>
+        <script src="/js/scrollbar.js"></script>
+        <script src="/js/jquery-ui.js"></script>
+        <script src="/js/jquery.nice-select.min.js"></script>
+        <script src="/js/isotope.js"></script>
+        <script src="/js/jquery.lettering.min.js"></script>
+        <script src="/js/jquery.circleType.js"></script>
+
+        <script type="module" src="/js/bxslider.js"></script>
+        <script type="module" src="/js/jquery.bootstrap-touchspin.js"></script>  */}
+
+        {/* <!-- map script --> */}
+        {/* <script
+          src={`https://maps.googleapis.com/maps/api/js?key=AIzaSyA-CE0deH3Jhj6GN4YvdCFZS7DpbXexzGU`}
+        ></script> */}
+        {/* <script src="/js/gmaps.js"></script>
+        <script type="module" src="/js/map-helper.js"></script> */}
+
+        {/* <!-- main-js --> */}
+        {/* <script src="/js/script.js"></script> */}
+      </body>
     </html>
   );
 }
