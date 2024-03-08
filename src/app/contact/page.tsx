@@ -1,5 +1,6 @@
 import React from "react";
 import ContactForm from "./components/ContactForm";
+import ScrollButton from "../home/components/ScrollButton";
 
 export default function Contact() {
   return (
@@ -210,9 +211,7 @@ export default function Contact() {
         {/* google-map-section end */}
 
         {/* scroll to top */}
-        <button className="scroll-top scroll-to-target" data-target="html">
-          <i className="flaticon-up-arrow" />
-        </button>
+        <ScrollButton />
       </div>
       {/* jequery plugins */}
       {/* map script */}

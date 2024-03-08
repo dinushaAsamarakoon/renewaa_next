@@ -1,6 +1,7 @@
 import React from "react";
 import Funfact from "../home/components/Funfat";
 import Statements from "./components/Statements";
+import ScrollButton from "../home/components/ScrollButton";
 const About = () => {
   return (
     <>
@@ -527,9 +528,7 @@ const About = () => {
         {/* funfact-section end */}
 
         {/* scroll to top */}
-        <button className="scroll-top scroll-to-target" data-target="html">
-          <i className="flaticon-up-arrow" />
-        </button>
+        <ScrollButton />
       </div>
       {/* jequery plugins */}
       {/* main-js */}

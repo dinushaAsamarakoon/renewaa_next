@@ -71,18 +71,18 @@
   // }
 
   // Scroll to a Specific Div
-  if ($(".scroll-to-target").length) {
-    $(".scroll-to-target").on("click", function () {
-      var target = $(this).attr("data-target");
-      // animate
-      $("html, body").animate(
-        {
-          scrollTop: $(target).offset().top,
-        },
-        1000
-      );
-    });
-  }
+  // if ($(".scroll-to-target").length) {
+  //   $(".scroll-to-target").on("click", function () {
+  //     var target = $(this).attr("data-target");
+  //     // animate
+  //     $("html, body").animate(
+  //       {
+  //         scrollTop: $(target).offset().top,
+  //       },
+  //       1000
+  //     );
+  //   });
+  // }
 
   // Elements Animation
   if ($(".wow").length) {

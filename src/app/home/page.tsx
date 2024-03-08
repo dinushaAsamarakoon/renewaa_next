@@ -4,6 +4,8 @@ import About from "./components/About";
 import Funfact from "./components/Funfat";
 import Projects from "./components/Projects";
 import Services from "./components/Services";
+import React, { useEffect, useRef, useState } from "react";
+import ScrollButton from "./components/ScrollButton";
 
 export default function Home() {
   return (
@@ -99,9 +101,7 @@ export default function Home() {
         {/* project-section end */}
 
         {/* scroll to top */}
-        <button className="scroll-top scroll-to-target" data-target="html">
-          <i className="flaticon-up-arrow" />
-        </button>
+        <ScrollButton />
       </div>
     </>
   );
