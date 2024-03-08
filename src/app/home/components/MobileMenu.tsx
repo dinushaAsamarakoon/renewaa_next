@@ -21,29 +21,50 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ menuVisible, toggleMenu }) => {
           <i className="fas fa-times" />
         </div>
         {/* <Scrollbar elementRef={myRef} style={{ height: "100%" }}> */}
-        <nav className="menu-box">
+        <nav className="flex flex-col menu-box justify-between">
           <div className="nav-logo">
             <Link href="/home">
               <img src="/assets/images/rwenaa-logo.png" alt="" title="" />
             </Link>
           </div>
           <div className="menu-outer">
-            <div
-              id="navbarSupportedContent"
-              className="collapse navbar-collapse show clearfix"
-            >
-              <ul className="navigation clearfix">
-                <li className="current">
-                  <Link href="/home">Home</Link>
+            <div className="w-full flex-row flex-grow lg:flex lg:items-center lg:w-auto ">
+              <ul className="flex flex-col gap-4 justify-between w-full navigation clearfix">
+                <li className="">
+                  <Link
+                    href="/home"
+                    className="hover:text-[#0084ec] font-bold font-sans text-sm text-white"
+                    onClick={toggleMenu}
+                  >
+                    HOME
+                  </Link>
                 </li>
-                <li>
-                  <Link href="/about">About US</Link>
+                <li className="">
+                  <Link
+                    href="/about"
+                    className="hover:text-[#0084ec] text-white font-bold font-sans text-sm whitespace-nowrap"
+                    onClick={toggleMenu}
+                  >
+                    ABOUT US
+                  </Link>
                 </li>
-                <li>
-                  <Link href="/projects">Projects</Link>
+                <li className="">
+                  <Link
+                    href="/projects"
+                    className="hover:text-[#0084ec] text-white font-bold font-sans text-sm"
+                    onClick={toggleMenu}
+                  >
+                    PROJECTS
+                  </Link>
                 </li>
-                <li>
-                  <Link href="/contact">Contact US</Link>
+                <li className="">
+                  <Link
+                    href="/contact"
+                    className="hover:text-[#0084ec] text-white font-bold font-sans text-sm whitespace-nowrap"
+                    onClick={toggleMenu}
+                  >
+                    CONTACT US
+                  </Link>
                 </li>
               </ul>
             </div>

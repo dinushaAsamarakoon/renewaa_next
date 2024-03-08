@@ -43,66 +43,72 @@ const Header = () => {
     <>
       <header className="main-header" ref={headerRef}>
         {/* header-lower */}
-        <div className="header-lower">
-          <div className="auto-container">
-            <div className="flex outer-box clearfix justify-between">
-              <div className="flex menu-area pull-left clearfix items-center w-full ">
-                <div className="logo-box w-1/3">
-                  <figure className="flex w-full logo">
+        <div className="header-lower w-full">
+          <div className="auto-container w-full">
+            <div className="flex outer-box clearfix justify-between w-full">
+              <div className=" menu-area pull-left clearfix md:w-3/5 w-full">
+                <div className="flex flex-row items-center justify-between md:justify-start w-full h-full">
+                  <div className="flex logo-box h-full fixed">
                     <Link href="/home">
-                      <img src="assets/images/rwenaa-logo.png" alt="" />
+                      <figure className="flex h-full logo">
+                        <img src="assets/images/rwenaa-logo.png" alt="" />
+                      </figure>
                     </Link>
-                  </figure>
-                </div>
-                {/*Mobile Navigation Toggler*/}
-                <div className="mobile-nav-toggler" onClick={toggleMenu}>
-                  <i className="icon-bar" />
-                  <i className="icon-bar" />
-                  <i className="icon-bar" />
-                </div>
-                <nav
-                  className="hidden items-center lg:flex w-2/3"
-                  ref={horizontalNavigation}
-                >
-                  <div className="w-full flex-row flex-grow lg:flex lg:items-center lg:w-auto">
-                    <ul className="flex gap-4 justify-between w-full">
-                      <li className="text-white">
-                        <Link
-                          href="/home"
-                          className="hover:text-[#0084ec] text-black font-bold font-sans text-sm"
-                        >
-                          HOME
-                        </Link>
-                      </li>
-                      <li className="text-white">
-                        <Link
-                          href="/about"
-                          className="hover:text-[#0084ec] text-black font-bold font-sans text-sm whitespace-nowrap"
-                        >
-                          ABOUT US
-                        </Link>
-                      </li>
-                      <li className="text-white">
-                        <Link
-                          href="/projects"
-                          className="hover:text-[#0084ec] text-black font-bold font-sans text-sm"
-                        >
-                          PROJECTS
-                        </Link>
-                      </li>
-                      <li className="text-white">
-                        <Link
-                          href="/contact"
-                          className="hover:text-[#0084ec] text-black font-bold font-sans text-sm whitespace-nowrap"
-                        >
-                          CONTACT US
-                        </Link>
-                      </li>
-                    </ul>
                   </div>
-                </nav>
+                  {/*Mobile Navigation Toggler*/}
+                  <div
+                    className="mobile-nav-toggler m-0 p-0"
+                    onClick={toggleMenu}
+                  >
+                    <i className="icon-bar" />
+                    <i className="icon-bar" />
+                    <i className="icon-bar" />
+                  </div>
+
+                  <nav
+                    className="hidden items-center lg:flex w-2/3"
+                    ref={horizontalNavigation}
+                  >
+                    <div className="w-full flex-row flex-grow lg:flex lg:items-center lg:w-auto">
+                      <ul className="flex gap-4 justify-between w-full">
+                        <li className="text-white">
+                          <Link
+                            href="/home"
+                            className="hover:text-[#0084ec] text-black font-bold font-sans text-sm"
+                          >
+                            HOME
+                          </Link>
+                        </li>
+                        <li className="text-white">
+                          <Link
+                            href="/about"
+                            className="hover:text-[#0084ec] text-black font-bold font-sans text-sm whitespace-nowrap"
+                          >
+                            ABOUT US
+                          </Link>
+                        </li>
+                        <li className="text-white">
+                          <Link
+                            href="/projects"
+                            className="hover:text-[#0084ec] text-black font-bold font-sans text-sm"
+                          >
+                            PROJECTS
+                          </Link>
+                        </li>
+                        <li className="text-white">
+                          <Link
+                            href="/contact"
+                            className="hover:text-[#0084ec] text-black font-bold font-sans text-sm whitespace-nowrap"
+                          >
+                            CONTACT US
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+                </div>
               </div>
-              <div className="flex w-full justify-end nav-right pull-right clearfix">
+              <div className="flex w-2/5 justify-end nav-right pull-right clearfix">
                 <div className="support-box">
                   <h5>
                     <i className="fas fa-headphones" />

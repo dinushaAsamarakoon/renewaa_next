@@ -1,3 +1,4 @@
+"use client";
 const ContactForm = () => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

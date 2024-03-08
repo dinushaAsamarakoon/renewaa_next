@@ -20,11 +20,7 @@ const Loader = () => {
       if (preloaderCloseRef.current) {
         preloaderCloseRef.current.addEventListener("click", () => {
           if (loaderWrapRef.current) {
-            setTimeout(() => {
-              if (loaderWrapRef.current) {
-                loaderWrapRef.current.style.display = "none";
-              }
-            }, 2000);
+            loaderWrapRef.current.style.display = "none";
           }
         });
       }
@@ -32,6 +28,16 @@ const Loader = () => {
 
     handlePreloader();
     handlePreloaderClose();
+
+    // Clean up event listener on unmount
+    return () => {
+      if (preloaderCloseRef.current) {
+        preloaderCloseRef.current.removeEventListener(
+          "click",
+          handlePreloaderClose
+        );
+      }
+    };
   }, []);
 
   return (

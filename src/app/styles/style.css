@@ -95,7 +95,7 @@ body {
 
 .auto-container {
   position: static;
-  max-width: 1024px;
+  max-width: 1280px;
   padding: 0px 15px;
   margin: 0 auto;
 }
@@ -1743,7 +1743,7 @@ div#mCSB_1_container {
 
 .mobile-menu .contact-info {
   position: relative;
-  padding: 120px 30px 20px 30px;
+  padding: 0 30px 20px 30px;
 }
 
 .mobile-menu .contact-info h4 {

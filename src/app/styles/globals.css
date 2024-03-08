@@ -31,3 +31,15 @@ body {
     text-wrap: balance;
   }
 }
+
+@media (aspect-ratio: 1/1) {
+  .wrapper-project-image {
+    height: 100vw;
+  }
+}
+
+@media (aspect-ratio: 2/1) {
+  .wrapper-project-image {
+    height: 50vh;
+  }
+}
