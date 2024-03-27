@@ -49,9 +49,9 @@ const Header = () => {
               <div className=" menu-area pull-left clearfix md:w-3/5 w-full">
                 <div className="flex flex-row items-center justify-between md:justify-start w-full h-full">
                   <div className="flex logo-box h-full fixed">
-                    <Link href="/home">
+                    <Link href="/home" scroll={false}>
                       <figure className="flex h-full logo">
-                        <img src="assets/images/rwenaa-logo.png" alt="" />
+                        <img src="/assets/images/rwenaa-logo.png" alt="" />
                       </figure>
                     </Link>
                   </div>
@@ -75,6 +75,7 @@ const Header = () => {
                           <Link
                             href="/home"
                             className="hover:text-[#0084ec] text-black font-bold font-sans text-sm"
+                            scroll={false}
                           >
                             HOME
                           </Link>
@@ -83,6 +84,7 @@ const Header = () => {
                           <Link
                             href="/about"
                             className="hover:text-[#0084ec] text-black font-bold font-sans text-sm whitespace-nowrap"
+                            scroll={false}
                           >
                             ABOUT US
                           </Link>
@@ -99,6 +101,7 @@ const Header = () => {
                           <Link
                             href="/contact"
                             className="hover:text-[#0084ec] text-black font-bold font-sans text-sm whitespace-nowrap"
+                            scroll={false}
                           >
                             CONTACT US
                           </Link>
@@ -148,9 +151,9 @@ const Header = () => {
               <div className=" menu-area pull-left clearfix md:w-3/5 w-full">
                 <div className="flex flex-row items-center justify-between md:justify-start w-full h-full">
                   <div className="flex logo-box h-full fixed">
-                    <Link href="/home">
+                    <Link href="/home" scroll={false}>
                       <figure className="flex h-full logo">
-                        <img src="assets/images/rwenaa-logo.png" alt="" />
+                        <img src="/assets/images/rwenaa-logo.png" alt="" />
                       </figure>
                     </Link>
                   </div>
@@ -174,6 +177,7 @@ const Header = () => {
                           <Link
                             href="/home"
                             className="hover:text-[#0084ec] text-black font-bold font-sans text-sm"
+                            scroll={false}
                           >
                             HOME
                           </Link>
@@ -182,6 +186,7 @@ const Header = () => {
                           <Link
                             href="/about"
                             className="hover:text-[#0084ec] text-black font-bold font-sans text-sm whitespace-nowrap"
+                            scroll={false}
                           >
                             ABOUT US
                           </Link>
@@ -190,6 +195,7 @@ const Header = () => {
                           <Link
                             href="/projects"
                             className="hover:text-[#0084ec] text-black font-bold font-sans text-sm"
+                            scroll={false}
                           >
                             PROJECTS
                           </Link>
@@ -198,6 +204,7 @@ const Header = () => {
                           <Link
                             href="/contact"
                             className="hover:text-[#0084ec] text-black font-bold font-sans text-sm whitespace-nowrap"
+                            scroll={false}
                           >
                             CONTACT US
                           </Link>

@@ -99,7 +99,11 @@ const Banner = () => {
                     <h1>{item.header1_part2}</h1>
                     <h6>Empowering our future with solar energy.</h6>
                     <div className="btn-box">
-                      <Link href="/about" className="theme-btn btn-one">
+                      <Link
+                        href="/about"
+                        className="theme-btn btn-one"
+                        scroll={false}
+                      >
                         <i className="flaticon-right-arrow" />
                         Read More
                       </Link>

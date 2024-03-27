@@ -26,7 +26,7 @@ const Statements = () => {
                 onClick={() => handleTabClick("#tab-1")}
               >
                 <div className="icon-box">
-                  <img src="assets/images/icons/icon-40-blue.png" alt="" />
+                  <img src="/assets/images/icons/icon-40-blue.png" alt="" />
                 </div>
                 <div className="icon-box-2">
                   <img src="/assets/images/icons/icon-41-blue.png" alt="" />

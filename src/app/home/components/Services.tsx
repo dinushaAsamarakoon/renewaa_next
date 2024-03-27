@@ -46,7 +46,7 @@ const Services = () => {
                     <div className="text">
                       <span className="category">Next Generation</span>
                       <h3>
-                        <Link href="/about">
+                        <Link href="/about" scroll={false}>
                           Electric Mobility Solutions
                         </Link>
                       </h3>
@@ -77,7 +77,7 @@ const Services = () => {
                     <div className="text">
                       <span className="category">High End</span>
                       <h3>
-                        <Link href="/about">
+                        <Link href="/about" scroll={false}>
                           Energy Storage Solutions
                         </Link>
                       </h3>
@@ -107,7 +107,9 @@ const Services = () => {
                         Solar Ongrid, and Off-Grid
                       </span>
                       <h3>
-                        <Link href="/about">Installations</Link>
+                        <Link href="/about" scroll={false}>
+                          Installations
+                        </Link>
                       </h3>
                     </div>
                   </div>

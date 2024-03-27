@@ -228,13 +228,13 @@ h6 {
 }
 
 .handle-preloader .animation-preloader .spinner {
-  /* animation: spinner 1s infinite linear; */
-  /* border-radius: 50%; */
-  /* height: 150px; */
-  margin: 0 auto 100px auto;
-  /* width: 150px; */
-  width: 50%;
-  animation: spin 4s linear 0.5s infinite;
+  animation: spinner 1s infinite linear;
+  border-radius: 50%;
+  height: 150px;
+  margin: 0 auto 45px auto;
+  width: 150px;
+  /* width: 50%; */
+  /* animation: spin 4s linear 0.5s infinite; */
 }
 
 .spinner-container {
@@ -1004,7 +1004,7 @@ img {
 
 .main-header .nav-right .support-box .info-box {
   position: absolute;
-  left: 0px;
+  right: 0px;
   top: 70px;
   width: 310px;
   background-color: #fff;

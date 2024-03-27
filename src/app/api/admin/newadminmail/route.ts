@@ -2,7 +2,6 @@ import nodemailer from "nodemailer";
 
 export async function POST(req: Request, res: Response) {
   const details = await req.json();
-
   try {
     if (!details) {
       return new Response(
@@ -14,7 +13,7 @@ export async function POST(req: Request, res: Response) {
         }
       );
     }
-    const { username, email, phone, subject, message } = details;
+    const { email, username, password } = details;
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -24,16 +23,12 @@ export async function POST(req: Request, res: Response) {
     });
 
     const mailOptions = {
-      from: email,
-      // to: "info@renewaa.com",
-      to: process.env.NEXT_PUBLIC_EMAIL_RECEIVER,
-      subject: `New message from ${username}`,
+      from: process.env.NEXT_PUBLIC_EMAIL_SENDER,
+      to: email,
+      subject: `Admin Credentials for RENEWAA`,
       text: `
-        Name: ${username}
-        Email: ${email}
-        Phone: ${phone}
-        Subject: ${subject}
-        Message: ${message}
+        username: ${username}
+        password: ${password}
       `,
     };
 

@@ -135,12 +135,15 @@ const Projects = () => {
                       <div className="inner">
                         <h6>[ {project.category} ]</h6>
                         <h5>
-                          <Link href={`/project?id=${project.projectId}`}>
+                          <Link
+                            href={`/project?id=${project.projectId}`}
+                            scroll={false}
+                          >
                             {project.linkText}
                           </Link>
                         </h5>
                         <div className="link">
-                          <Link href="#">
+                          <Link href="#" scroll={false}>
                             <i className="flaticon-right-arrow" />
                           </Link>
                         </div>

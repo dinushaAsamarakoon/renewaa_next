@@ -55,7 +55,10 @@ export default function Contact() {
         property="og:description"
         content="Contact Renewaa for all your energy storage needs. We offer innovative lithium battery services at competitive prices. Get in touch with us today!"
       />
-      <meta property="og:image" content="assets/images/banner/Banner-one.jpg" />
+      <meta
+        property="og:image"
+        content="/assets/images/banner/Banner-one.jpg"
+      />
       <meta property="og:url" content="https://www.renewaa.com/contact-us" />
       {/* Twitter Card Tags */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -69,7 +72,7 @@ export default function Contact() {
       />
       <meta
         name="twitter:image"
-        content="assets/images/banner/Banner-one.jpg"
+        content="/assets/images/banner/Banner-one.jpg"
       />
       {/* page wrapper */}
       <div className="boxed_wrapper items-center">
@@ -78,7 +81,7 @@ export default function Contact() {
           className="page-title"
           style={{
             backgroundImage:
-              "url(assets/images/background/contact-page-title.jpg)",
+              "url(/assets/images/background/contact-page-title.jpg)",
           }}
         >
           <div className="auto-container">
@@ -123,7 +126,7 @@ export default function Contact() {
                     className="shape"
                     style={{
                       backgroundImage:
-                        "url(assets/images/icons/icons-shape-1.png)",
+                        "url(/assets/images/icons/icons-shape-1.png)",
                     }}
                   />
                   <div className="single-info-box">
@@ -154,7 +157,7 @@ export default function Contact() {
               <div className="col-lg-4 col-md-12 col-sm-12 image-column">
                 <div className="image-box">
                   <figure className="image clearfix">
-                    <img src="assets/images/resource/contact-01.jpg" alt="" />
+                    <img src="/assets/images/resource/contact-01.jpg" alt="" />
                   </figure>
                 </div>
               </div>

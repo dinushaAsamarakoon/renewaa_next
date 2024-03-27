@@ -1,7 +1,7 @@
 "use client";
 import useEffectOnce from "@/app/hooks/useeffectonce";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React from "react";
 
 const Footer = () => {
   useEffectOnce(() => {
@@ -26,7 +26,7 @@ const Footer = () => {
             <div className="col-lg-3 col-md-6 col-sm-12 footer-column">
               <div className="footer-widget logo-widget">
                 <figure className="footer-logo">
-                  <Link href="/home">
+                  <Link href="/home" scroll={false}>
                     <img src="/assets/images/rwenaa-logo.png" alt="" />
                   </Link>
                 </figure>
@@ -52,10 +52,24 @@ const Footer = () => {
                 <div className="widget-content">
                   <ul className="links-list clearfix">
                     <li>
-                      <Link href="/about">About Us</Link>
+                      <Link href="/home" scroll={false}>
+                        Home
+                      </Link>
                     </li>
                     <li>
-                      <Link href="/contact">Contact Us</Link>
+                      <Link href="/about" scroll={false}>
+                        About Us
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/contact" scroll={false}>
+                        Contact Us
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/projects" scroll={false}>
+                        Projects
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -67,10 +81,24 @@ const Footer = () => {
                 <div className="widget-content">
                   <ul className="links-list clearfix">
                     <li>
-                      <Link href="/about">About Us</Link>
+                      <Link href="/home" scroll={false}>
+                        Home
+                      </Link>
                     </li>
                     <li>
-                      <Link href="/contact">Contact Us</Link>
+                      <Link href="/about" scroll={false}>
+                        About Us
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/contact" scroll={false}>
+                        Contact Us
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/projects" scroll={false}>
+                        Projects
+                      </Link>
                     </li>
                   </ul>
                 </div>

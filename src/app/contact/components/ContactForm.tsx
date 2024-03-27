@@ -1,4 +1,6 @@
 "use client";
+import React from "react";
+
 const ContactForm = () => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

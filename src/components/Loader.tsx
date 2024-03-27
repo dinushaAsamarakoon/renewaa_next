@@ -48,13 +48,15 @@ const Loader = () => {
         </div>
         <div id="handle-preloader" className="handle-preloader">
           <div className="animation-preloader">
-            <div className="spinner-container">
+            {/* <div className="spinner-container">
               <img
                 className="spinner"
                 src="/assets/images/rwenaa-logo.png"
                 alt="Loading..."
               />
-            </div>
+            </div> */}
+            <div className="spinner"></div>
+
             <div className="txt-loading">
               <span data-text-preloader="r" className="letters-loading">
                 r

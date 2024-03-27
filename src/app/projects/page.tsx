@@ -1,72 +1,66 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import { BsCheckCircle } from "react-icons/bs";
 import Link from "next/link";
-
-type Project = {
-  id: number;
-  image: string;
-  header: string;
-  content: string;
-  collage: string[];
-};
+import { Project } from "@/components/Types";
 
 export default function Projects() {
-  const projects: Project[] = [
-    {
-      id: 1,
-      image: "/assets/images/projects/one/one-main.png",
-      header: "ELECTRIC THREE-WHEELER CONVERSION PROJECT WITH LAUGFS ECO SRI",
-      content:
-        "Embark on a journey towards sustainable urban mobility with Renewaa Energy's Electric Three-Wheeler Conversion Project in collaboration with Laugfs Eco Sri. Our joint endeavor aimed at revolutionizing urban transportation by embracing electric vehicle technology, specifically focusing on the conversion of three-wheelers. At Renewaa Energy, we proudly played a pivotal role in this ambitious project, designing and supplying cutting-edge lithium battery packs tailored to the unique requirements of Laugfs Eco Sri.\n     Our lithium battery solutions were meticulously engineered to optimize the performance, reliability, and energy efficiency of electric three-wheelers, leading to a substantial reduction in carbon emissions and operational costs. Leveraging our expertise in lithium battery technology, we seamlessly integrated these advanced solutions into Laugfs Eco Sri's electric vehicle conversion initiative, facilitating a smooth transition to sustainable transportation.\n The successful outcome of this collaboration is a testament to Renewaa Energy's unwavering commitment to driving innovation and sustainability in the transportation sector. By empowering partners like Laugfs Eco Sri with advanced lithium battery solutions, we collectively propel towards a cleaner, greener future. This project's resounding success exemplifies our dedication to delivering impactful solutions that not only meet but exceed the expectations of our valued partners. Join us as we continue our journey towards a more sustainable and electrified future, one project at a time.",
-      collage: [
-        "/assets/images/projects/one/one-collage-one.png",
-        "/assets/images/projects/one/one-collage-two.png",
-        "/assets/images/projects/one/one-collage-three.png",
-        "/assets/images/projects/one/one-collage-four.png",
-        "/assets/images/projects/one/one-collage-five.png",
-        "/assets/images/projects/one/one-collage-six.png",
-      ],
-    },
-    {
-      id: 2,
-      image: "/assets/images/projects/two/two-main.png",
-      header:
-        "ELECTRIC FORK LIFT BATTERY CONVERSION PROJECT WITH CEYLON TOBACCOO COMPANY",
-      content:
-        "Embark on a journey of innovation and excellence with Renewaa Energy's Electric Forklift Battery Conversion Project in collaboration with the Ceylon Tobacco Company. Witness the transformative power of lithium battery technology as we upgraded their electric forklift fleet, shifting from traditional lead-acid to advanced lithium battery packs. Our meticulous design and installation process ensured bespoke solutions tailored to the unique requirements of Ceylon Tobacco Company's electric forklifts.\n        The results speak volumes, with a remarkable improvement in performance metrics, operational efficiency, and increased uptime. Beyond the immediate gains, the adoption of lithium batteries translated into substantial long-term cost savings due to their superior durability and reduced maintenance needs. This successful project not only underscores Renewaa Energy's dedication to cutting-edge energy storage solutions but also solidifies our position as a trusted leader in lithium battery-based energy solutions. Partner with us and experience firsthand how our commitment to innovation drives sustainable growth and efficiency across diverse industries, ensuring your trust is met with exceptional outcomes",
-      collage: [
-        "/assets/images/projects/two/one-collage-one.png",
-        "/assets/images/projects/two/one-collage-two.png",
-        "/assets/images/projects/two/one-collage-three.png",
-        "/assets/images/projects/two/one-collage-four.png",
-        "/assets/images/projects/two/one-collage-five.png",
-      ],
-    },
-    {
-      id: 3,
-      image: "/assets/images/projects/three/three-main.png",
-      header:
-        "ELECTRIC VEHICLE CONVERSION PROJECTSWITH JINASENA INNOVATION AND TECHNOLOGYINSTITUTE (PVT) LTD",
-      content:
-        "Embarking on the forefront of electric vehicle innovation, Renewaa Energy proudly collaborated with Jinasena Innovation and Technology Institute (Pvt) Ltd in pioneering Electric Vehicle Conversion Projects. As a key partner in this transformative initiative, we supplied state-of-the-art lithium batteries to fuel their groundbreaking electric vehicle conversions.\n        Our lithium battery solutions were meticulously crafted to meet the stringent performance and reliability standards demanded by electric vehicles, ensuring optimal efficiency and extended range. Drawing upon our deep expertise in lithium battery technology, we empowered Jinasena Innovation and Technology Institute to expedite the adoption of electric mobility solutions across diverse applications.\n        The positive feedback received from Jinasena Innovation and Technology Institute stands as a testament to the superior quality and performance of our lithium batteries. We take pride in contributing to their success and remain steadfast in our commitment to delivering innovative energy storage solutions that foster sustainability and progress.\n        Renewaa Energy eagerly anticipates future collaborations with industry leaders like Jinasena Innovation and Technology Institute, as we collectively pave the way for a cleaner, more electrified future. Join us in the journey towards sustainable transportation and a greener tomorrow.",
-      collage: [
-        "/assets/images/projects/three/one-collage-one.png",
-        "/assets/images/projects/three/one-collage-two.png",
-        "/assets/images/projects/three/one-collage-three.png",
-        "/assets/images/projects/three/one-collage-four.png",
-        "/assets/images/projects/three/one-collage-five.png",
-      ],
-    },
-    {
-      id: 4,
-      image: "/assets/images/projects/four/four-main.png",
-      header:
-        "SUPPLY ENERGY SOLUTIONS FOR INDUSTRY LEADERSSUCH AS OREL CORPORATION & FERENTINO TYRECORPORATION.",
-      content:
-        "Embark on a journey towards sustainable urban mobility with Renewaa Energy's Electric Three-Wheeler Conversion Project in collaboration with Laugfs Eco Sri. Our joint endeavor aimed at revolutionizing urban transportation by embracing electric vehicle technology, specifically focusing on the conversion of three-wheelers. At Renewaa Energy, we proudly played a pivotal role in this ambitious project, designing and supplying cutting-edge lithium battery packs tailored to the unique requirements of Laugfs Eco Sri.\n     Our lithium battery solutions were meticulously engineered to optimize the performance, reliability, and energy efficiency of electric three-wheelers, leading to a substantial reduction in carbon emissions and operational costs. Leveraging our expertise in lithium battery technology, we seamlessly integrated these advanced solutions into Laugfs Eco Sri's electric vehicle conversion initiative, facilitating a smooth transition to sustainable transportation.\n The successful outcome of this collaboration is a testament to Renewaa Energy's unwavering commitment to driving innovation and sustainability in the transportation sector. By empowering partners like Laugfs Eco Sri with advanced lithium battery solutions, we collectively propel towards a cleaner, greener future. This project's resounding success exemplifies our dedication to delivering impactful solutions that not only meet but exceed the expectations of our valued partners. Join us as we continue our journey towards a more sustainable and electrified future, one project at a time.",
-      collage: [],
-    },
-  ];
+  // const projects: Project[] = [
+  //   {
+  //     id: 1,
+  //     image: "/assets/images/projects/one/one-main.png",
+  //     header: "ELECTRIC THREE-WHEELER CONVERSION PROJECT WITH LAUGFS ECO SRI",
+  //     content:
+  //       "Embark on a journey towards sustainable urban mobility with Renewaa Energy's Electric Three-Wheeler Conversion Project in collaboration with Laugfs Eco Sri. Our joint endeavor aimed at revolutionizing urban transportation by embracing electric vehicle technology, specifically focusing on the conversion of three-wheelers. At Renewaa Energy, we proudly played a pivotal role in this ambitious project, designing and supplying cutting-edge lithium battery packs tailored to the unique requirements of Laugfs Eco Sri.\n     Our lithium battery solutions were meticulously engineered to optimize the performance, reliability, and energy efficiency of electric three-wheelers, leading to a substantial reduction in carbon emissions and operational costs. Leveraging our expertise in lithium battery technology, we seamlessly integrated these advanced solutions into Laugfs Eco Sri's electric vehicle conversion initiative, facilitating a smooth transition to sustainable transportation.\n The successful outcome of this collaboration is a testament to Renewaa Energy's unwavering commitment to driving innovation and sustainability in the transportation sector. By empowering partners like Laugfs Eco Sri with advanced lithium battery solutions, we collectively propel towards a cleaner, greener future. This project's resounding success exemplifies our dedication to delivering impactful solutions that not only meet but exceed the expectations of our valued partners. Join us as we continue our journey towards a more sustainable and electrified future, one project at a time.",
+  //     collage: [
+  //       "/assets/images/projects/one/one-collage-one.png",
+  //       "/assets/images/projects/one/one-collage-two.png",
+  //       "/assets/images/projects/one/one-collage-three.png",
+  //       "/assets/images/projects/one/one-collage-four.png",
+  //       "/assets/images/projects/one/one-collage-five.png",
+  //       "/assets/images/projects/one/one-collage-six.png",
+  //     ],
+  //   },
+  //   {
+  //     id: 2,
+  //     image: "/assets/images/projects/two/two-main.png",
+  //     header:
+  //       "ELECTRIC FORK LIFT BATTERY CONVERSION PROJECT WITH CEYLON TOBACCOO COMPANY",
+  //     content:
+  //       "Embark on a journey of innovation and excellence with Renewaa Energy's Electric Forklift Battery Conversion Project in collaboration with the Ceylon Tobacco Company. Witness the transformative power of lithium battery technology as we upgraded their electric forklift fleet, shifting from traditional lead-acid to advanced lithium battery packs. Our meticulous design and installation process ensured bespoke solutions tailored to the unique requirements of Ceylon Tobacco Company's electric forklifts.\n        The results speak volumes, with a remarkable improvement in performance metrics, operational efficiency, and increased uptime. Beyond the immediate gains, the adoption of lithium batteries translated into substantial long-term cost savings due to their superior durability and reduced maintenance needs. This successful project not only underscores Renewaa Energy's dedication to cutting-edge energy storage solutions but also solidifies our position as a trusted leader in lithium battery-based energy solutions. Partner with us and experience firsthand how our commitment to innovation drives sustainable growth and efficiency across diverse industries, ensuring your trust is met with exceptional outcomes",
+  //     collage: [
+  //       "/assets/images/projects/two/one-collage-one.png",
+  //       "/assets/images/projects/two/one-collage-two.png",
+  //       "/assets/images/projects/two/one-collage-three.png",
+  //       "/assets/images/projects/two/one-collage-four.png",
+  //       "/assets/images/projects/two/one-collage-five.png",
+  //     ],
+  //   },
+  //   {
+  //     id: 3,
+  //     image: "/assets/images/projects/three/three-main.png",
+  //     header:
+  //       "ELECTRIC VEHICLE CONVERSION PROJECTSWITH JINASENA INNOVATION AND TECHNOLOGYINSTITUTE (PVT) LTD",
+  //     content:
+  //       "Embarking on the forefront of electric vehicle innovation, Renewaa Energy proudly collaborated with Jinasena Innovation and Technology Institute (Pvt) Ltd in pioneering Electric Vehicle Conversion Projects. As a key partner in this transformative initiative, we supplied state-of-the-art lithium batteries to fuel their groundbreaking electric vehicle conversions.\n        Our lithium battery solutions were meticulously crafted to meet the stringent performance and reliability standards demanded by electric vehicles, ensuring optimal efficiency and extended range. Drawing upon our deep expertise in lithium battery technology, we empowered Jinasena Innovation and Technology Institute to expedite the adoption of electric mobility solutions across diverse applications.\n        The positive feedback received from Jinasena Innovation and Technology Institute stands as a testament to the superior quality and performance of our lithium batteries. We take pride in contributing to their success and remain steadfast in our commitment to delivering innovative energy storage solutions that foster sustainability and progress.\n        Renewaa Energy eagerly anticipates future collaborations with industry leaders like Jinasena Innovation and Technology Institute, as we collectively pave the way for a cleaner, more electrified future. Join us in the journey towards sustainable transportation and a greener tomorrow.",
+  //     collage: [
+  //       "/assets/images/projects/three/one-collage-one.png",
+  //       "/assets/images/projects/three/one-collage-two.png",
+  //       "/assets/images/projects/three/one-collage-three.png",
+  //       "/assets/images/projects/three/one-collage-four.png",
+  //       "/assets/images/projects/three/one-collage-five.png",
+  //     ],
+  //   },
+  //   {
+  //     id: 4,
+  //     image: "/assets/images/projects/four/four-main.png",
+  //     header:
+  //       "SUPPLY ENERGY SOLUTIONS FOR INDUSTRY LEADERSSUCH AS OREL CORPORATION & FERENTINO TYRECORPORATION.",
+  //     content:
+  //       "Embark on a journey towards sustainable urban mobility with Renewaa Energy's Electric Three-Wheeler Conversion Project in collaboration with Laugfs Eco Sri. Our joint endeavor aimed at revolutionizing urban transportation by embracing electric vehicle technology, specifically focusing on the conversion of three-wheelers. At Renewaa Energy, we proudly played a pivotal role in this ambitious project, designing and supplying cutting-edge lithium battery packs tailored to the unique requirements of Laugfs Eco Sri.\n     Our lithium battery solutions were meticulously engineered to optimize the performance, reliability, and energy efficiency of electric three-wheelers, leading to a substantial reduction in carbon emissions and operational costs. Leveraging our expertise in lithium battery technology, we seamlessly integrated these advanced solutions into Laugfs Eco Sri's electric vehicle conversion initiative, facilitating a smooth transition to sustainable transportation.\n The successful outcome of this collaboration is a testament to Renewaa Energy's unwavering commitment to driving innovation and sustainability in the transportation sector. By empowering partners like Laugfs Eco Sri with advanced lithium battery solutions, we collectively propel towards a cleaner, greener future. This project's resounding success exemplifies our dedication to delivering impactful solutions that not only meet but exceed the expectations of our valued partners. Join us as we continue our journey towards a more sustainable and electrified future, one project at a time.",
+  //     collage: [],
+  //   },
+  // ];
 
   const collage: string[] = [
     "/assets/images/projects/ex-collage-one.png",
@@ -75,6 +69,54 @@ export default function Projects() {
     "/assets/images/projects/ex-collage-four.png",
     "/assets/images/projects/ex-collage-five.png",
   ];
+
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [numColumns, setNumColumns] = useState(getNumColumns());
+
+  function getNumColumns() {
+    if (typeof window !== "undefined") {
+      return window.innerWidth > 1024 ? 3 : window.innerWidth > 640 ? 2 : 1;
+    }
+    return 3;
+  }
+
+  useEffect(() => {
+    function handleResize() {
+      setNumColumns(getNumColumns());
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setIsLoading(true);
+      try {
+        const response = await fetch("/api/projects", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+
+        const data = await response.json();
+        setProjects(data.projects);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <>
       <meta charSet="utf-8" />
@@ -194,7 +236,7 @@ export default function Projects() {
                     }}
                   ></div>
                   <img
-                    src={project.image}
+                    src={project.mainImageUrl}
                     className={`absolute bottom-0 md:right-0 pb-3 px-1 ${
                       index % 2 != 0 ? "left-0" : "right-0"
                     }`}
@@ -213,9 +255,9 @@ export default function Projects() {
               >
                 <BsCheckCircle size={50} color="#0084EC" />
                 <h4 className="text-white text-center font-bold mt-3">
-                  {project.header}
+                  {project.title}
                 </h4>
-                <Link href={`/project?id=${project.id}`}>
+                <Link href={`/project/${project.id}`} scroll={false}>
                   <button className="bg-[#0084EC] rounded-xl px-4 py-2 mt-3">
                     <h6 className="text-white font-bold">See More...</h6>
                   </button>

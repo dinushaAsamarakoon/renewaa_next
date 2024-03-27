@@ -23,7 +23,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ menuVisible, toggleMenu }) => {
         {/* <Scrollbar elementRef={myRef} style={{ height: "100%" }}> */}
         <nav className="flex flex-col menu-box justify-between">
           <div className="nav-logo">
-            <Link href="/home">
+            <Link href="/home" scroll={false}>
               <img src="/assets/images/rwenaa-logo.png" alt="" title="" />
             </Link>
           </div>
@@ -35,6 +35,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ menuVisible, toggleMenu }) => {
                     href="/home"
                     className="hover:text-[#0084ec] font-bold font-sans text-sm text-white"
                     onClick={toggleMenu}
+                    scroll={false}
                   >
                     HOME
                   </Link>
@@ -44,6 +45,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ menuVisible, toggleMenu }) => {
                     href="/about"
                     className="hover:text-[#0084ec] text-white font-bold font-sans text-sm whitespace-nowrap"
                     onClick={toggleMenu}
+                    scroll={false}
                   >
                     ABOUT US
                   </Link>
@@ -53,6 +55,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ menuVisible, toggleMenu }) => {
                     href="/projects"
                     className="hover:text-[#0084ec] text-white font-bold font-sans text-sm"
                     onClick={toggleMenu}
+                    scroll={false}
                   >
                     PROJECTS
                   </Link>
@@ -62,6 +65,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ menuVisible, toggleMenu }) => {
                     href="/contact"
                     className="hover:text-[#0084ec] text-white font-bold font-sans text-sm whitespace-nowrap"
                     onClick={toggleMenu}
+                    scroll={false}
                   >
                     CONTACT US
                   </Link>
@@ -84,27 +88,27 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ menuVisible, toggleMenu }) => {
           <div className="social-links">
             <ul className="clearfix">
               <li>
-                <Link href="/home">
+                <Link href="/home" scroll={false}>
                   <span className="fab fa-twitter" />
                 </Link>
               </li>
               <li>
-                <Link href="/home">
+                <Link href="/home" scroll={false}>
                   <span className="fab fa-facebook-square" />
                 </Link>
               </li>
               <li>
-                <Link href="/home">
+                <Link href="/home" scroll={false}>
                   <span className="fab fa-pinterest-p" />
                 </Link>
               </li>
               <li>
-                <Link href="/home">
+                <Link href="/home" scroll={false}>
                   <span className="fab fa-instagram" />
                 </Link>
               </li>
               <li>
-                <Link href="/home">
+                <Link href="/home" scroll={false}>
                   <span className="fab fa-youtube" />
                 </Link>
               </li>
